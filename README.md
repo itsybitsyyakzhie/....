@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,6 +40,7 @@
       cursor: pointer;
       transition: transform 0.2s ease;
       font-size: 1rem;
+      user-select: none;
     }
     .key:hover {
       transform: scale(1.1);
@@ -52,6 +52,7 @@
       border-radius: 12px;
       min-height: 50px;
       word-wrap: break-word;
+      font-size: 1rem;
     }
     .gift {
       background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmQ2aTN4MXRnNzZlbmtwYnQ4aHA3MjM4NTJyNDRza3d5ZGRnaHN6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6g564lKXZo796/giphy.gif')
@@ -71,31 +72,60 @@
       border-radius: 12px;
       text-align: center;
       font-style: italic;
+      font-size: 1rem;
     }
 
     iframe {
       width: 100%;
       border-radius: 12px;
       margin-top: 1rem;
+      height: 352px;
+      border: none;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+      }
+      h2 {
+        font-size: 1.2rem;
       }
       .section {
         padding: 1rem;
+        margin: 1rem auto;
+        max-width: 95%;
+      }
+      .keypad {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 8px;
       }
       .key {
-        padding: 0.6rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 0.3rem;
+        font-size: 0.8rem;
+        border-radius: 8px;
       }
       .gift {
-        height: 200px;
+        height: 180px;
+        background-size: contain;
+        background-position: center center;
+      }
+      .output {
+        font-size: 0.9rem;
+      }
+      #letter {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        padding: 0 0.5rem;
+      }
+      .before-i-forget {
+        font-size: 0.9rem;
+      }
+      iframe {
+        height: 250px;
       }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <h1>🐾 Happy Birthday Joha 🐹🎸</h1>
@@ -154,7 +184,7 @@
       <p>Thank you for making me feel the happiest I’ve ever been. Happy Birthday, Joha.</p>
       <p>P.S. I wanna marry you so bad.</p>
     </div>
-    <iframe src="https://open.spotify.com/embed/track/0T3pyPYtHAsxIRymAZsTkX?utm_source=generator&theme=0" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/0T3pyPYtHAsxIRymAZsTkX?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
   </div>
 
   <script>
@@ -165,20 +195,20 @@
       4: "Your charm that always brings me happiness",
       5: "How you listen to my random topics",
       6: "Your effort in updating me every day",
-      7: "How you freak out over my selfies and video of me smiling",
-      8: "Your (virtual) hugs and kisses",
-      9: 'When you call me "love," "baby," "darling," and "wifey"',
-      10: "Your bunny jumps",
-      11: "When you understand me in ways people don’t",
-      12: "How you genuinely care for me",
-      13: "Your soothing voice",
-      14: "How you respect my space but still make me feel close",
-      15: "How you smother me with kisses, love, and affection",
-      16: "How you always know when I'm hungry or not",
-      17: "How you're not afraid of showing me your vulnerable side",
-      18: "Your sense of humor",
-      19: "Your handsomeness, cuteness and everything",
-      20: "Everything."
+      7: "How you tell me you miss me so sweetly",
+      8: "Your silly bunny side that makes me smile",
+      9: "Your passion for music and how you share it with me",
+      10: "How you’re thoughtful even in small gestures",
+      11: "Your sense of humor that brightens my day",
+      12: "How you make me feel safe and secure",
+      13: "Your intelligence and how you explain things patiently",
+      14: "The way you support me when I’m down",
+      15: "How you remember the little details about me",
+      16: "Your creativity and imagination",
+      17: "Your kindness to everyone around you",
+      18: "How you handle challenges with calmness",
+      19: "Your adventurous spirit",
+      20: "How you make me feel like the luckiest girl alive"
     };
 
     function showTrait(num) {
@@ -187,7 +217,11 @@
 
     function toggleLetter() {
       const letter = document.getElementById('letter');
-      letter.classList.toggle('hidden');
+      if (letter.classList.contains('hidden')) {
+        letter.classList.remove('hidden');
+      } else {
+        letter.classList.add('hidden');
+      }
     }
   </script>
 </body>
