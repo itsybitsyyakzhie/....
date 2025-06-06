@@ -223,5 +223,7 @@
         letter.classList.add('hidden');
       }
     }
+    <button onclick="alert('💋 MWAH! Virtual kiss from Kirby — your love!')">Tap for kiss 💋</button>
+</section>
   </script>
 </body>
