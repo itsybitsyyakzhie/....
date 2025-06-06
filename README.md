@@ -8,12 +8,14 @@
       font-family: 'Poppins', 'Arial', sans-serif;
       background-color: #d0f5ce;
       margin: 0;
-      padding: 2rem;
+      padding: 1rem;
       color: #333;
+      box-sizing: border-box;
     }
     h1, h2 {
       text-align: center;
       color: #5a8f68;
+      word-wrap: break-word;
     }
     .section {
       margin: 2rem auto;
@@ -22,10 +24,11 @@
       border-radius: 20px;
       padding: 1.5rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
     }
     .keypad {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
       gap: 10px;
       margin-top: 1rem;
     }
@@ -37,6 +40,7 @@
       text-align: center;
       cursor: pointer;
       transition: transform 0.2s ease;
+      font-size: 1rem;
     }
     .key:hover {
       transform: scale(1.1);
@@ -47,11 +51,13 @@
       padding: 1rem;
       border-radius: 12px;
       min-height: 50px;
+      word-wrap: break-word;
     }
     .gift {
       background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmQ2aTN4MXRnNzZlbmtwYnQ4aHA3MjM4NTJyNDRza3d5ZGRnaHN6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6g564lKXZo796/giphy.gif')
       no-repeat center/cover;
-      height: 550px;
+      width: 100%;
+      height: 300px;
       border-radius: 10px;
       margin-bottom: 1rem;
       cursor: pointer;
@@ -59,15 +65,34 @@
     .hidden {
       display: none;
     }
-    .cat {
-      font-size: 1.2rem;
-    }
     .before-i-forget {
       background-color: #f2ffef;
       padding: 1.5rem;
       border-radius: 12px;
       text-align: center;
       font-style: italic;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .section {
+        padding: 1rem;
+      }
+      .key {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+      }
+      .gift {
+        height: 200px;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -129,7 +154,7 @@
       <p>Thank you for making me feel the happiest I’ve ever been. Happy Birthday, Joha.</p>
       <p>P.S. I wanna marry you so bad.</p>
     </div>
-    <iframe src="https://open.spotify.com/embed/track/0T3pyPYtHAsxIRymAZsTkX?utm_source=generator&theme=0" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/0T3pyPYtHAsxIRymAZsTkX?utm_source=generator&theme=0" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
   </div>
 
   <script>
